@@ -3,6 +3,16 @@ function pulsaciones(event){
     let textoUltimo = document.getElementById('ultimo');
     textoUltimo.innerHTML = nombreAnimal;
     textoUltimo.style.backgroundColor = 'yellow';
+
+    let mensaje =  event.target.parentNode.getElementsByClassName('mensaje')[0];
+    let contador = mensaje.innerHTML;
+    if (contador == 'Sin pulsaciones') {
+        mensaje.innerHTML = 1;
+    }
+    else {
+        contador++;
+        mensaje.innerHTML = contador;
+    }
 }
 
 function inicializar() {
